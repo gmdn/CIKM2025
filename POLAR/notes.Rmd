@@ -1,0 +1,47 @@
+---
+title: "notes"
+output: html_document
+date: "2025-11-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How to process everything
+
+*IMPORTANT: qrels are for all topics, topics are divided, when possibile, in training and test. It is through topics that we divide the collection.*
+
+First, we need to download the pubmed articles.
+
+1. Run 
+read_pubmed/get_pubmed_corpus_CLEF_TAR_201x
+*check and normalize the three files*
+
+2. Double check the counts with
+read_pubmed/count_docs_CELF_201x
+*check overview paper of CLEF 2019 compared to the actual numbers. The number of relevant docs is not correct in the tables.*
+
+3. Load runs 
+
+4. Evauate run
+*make sure that only the documents shown to the users are counted in the cost effective evaluation*
+*in CLEF TAR, the use of "AF", "NF", and "NS" is important*
+
+**** CREATE AN EVALUATION FOR CLEF (NS) ****
+
+## Notes and things to do
+
+In extract topic data, extract also the boolean query
+
+Remember to check overall costs and averages.
+
+Discuss if there is any reason to compute micro-Recall (sum of all the relevant documents divided by the total number of relevant documents).
+
+Include Average Precision (think about why we sould do it).
+
+Graded relevance could be used in training.
+
+WSS@r implementation in CLEF (WSS = 0 when recall is not achieved)
+
+for the budget allocation, if you set the budget you have some idea of the tau, if you set the tau, you have an idea of the minimum budget.
