@@ -59,12 +59,12 @@ years_summary <- years_summary %>%
   bind_rows(summary_results_epsilon_greedy_budget)
 
 
-###### if you are here....load the years_summary of the previous experiment
+###### if you are here....load the years_summary of the previous experiments
 
 # just in case
 years_summary_cikm <- years_summary
 
-years_summary_original <- readRDS("../CLEF eHealth 20250429/years_summary.rds")
+years_summary_original <- readRDS("./years_summary.rds")
 
 years_summary <- years_summary %>%
   bind_rows(years_summary_original)

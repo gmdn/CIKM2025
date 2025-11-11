@@ -8,6 +8,12 @@ date: "2025-11-11"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## One-shot reproduction
+
+In order to reproduce the results of the paper in one shot, please run 
+1) evaluate/run_evaluate_budget.R
+2) evaluate/run_evaluate_bandit_only_budget.R
+
 ## How to process everything
 
 *IMPORTANT: qrels are for all topics, topics are divided, when possibile, in training and test. It is through topics that we divide the collection.*
